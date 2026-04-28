@@ -21,7 +21,7 @@
           <span class="text-emerald-400 text-sm font-medium">LIVE DASHBOARD</span>
         </div>
         <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">Token usage and cost by model</h1>
-        <p class="text-zinc-400 mt-2">Actual OpenClaw-tracked usage, with selectable date ranges and 30 day history by default.</p>
+        <p class="text-zinc-400 mt-2">Actual OpenClaw-tracked usage, with selectable date ranges and 30 day history by default. The page checks for fresh data every 15 seconds, and the backend republishes about every minute.</p>
       </div>
       <div class="text-left md:text-right">
         <div id="lastUpdated" class="text-sm text-zinc-400">Loading...</div>
@@ -118,7 +118,7 @@
           <div class="text-sm text-zinc-400 space-y-2">
             <p><strong class="text-zinc-200">Source:</strong> <span id="source">--</span></p>
             <p id="coverageNote">--</p>
-            <p>This page fetches <code class="text-zinc-300">usage-data.json</code> from GitHub Pages and auto-refreshes every 60 seconds.</p>
+            <p>This page fetches <code class="text-zinc-300">usage-data.json</code> from GitHub Pages and checks for fresh data every 15 seconds. Backend publishes run about every minute, plus GitHub Pages build time.</p>
           </div>
         </div>
 
@@ -329,7 +329,7 @@
     }
 
     loadData();
-    setInterval(loadData, 60000);
+    setInterval(loadData, 15000);
   </script>
 </body>
 </html>
