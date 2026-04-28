@@ -13,7 +13,7 @@
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100 min-h-screen">
-  <div class="max-w-7xl mx-auto px-6 py-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
     <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between mb-8">
       <div>
         <div class="flex items-center gap-3 mb-2">
@@ -50,14 +50,15 @@
 
     <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
       <div class="xl:col-span-2 rounded-3xl bg-zinc-900 border border-zinc-800 overflow-hidden">
-        <div class="px-6 py-5 border-b border-zinc-800 flex items-center justify-between">
+        <div class="px-4 sm:px-6 py-5 border-b border-zinc-800 flex items-center justify-between gap-3">
           <div>
             <h2 class="text-lg font-semibold">Per-model breakdown</h2>
             <p class="text-sm text-zinc-400">Input, output, total tokens, messages, sessions, and cost</p>
           </div>
-          <div class="text-xs text-zinc-500">Window: <span id="windowHours">24</span>h</div>
+          <div class="text-xs text-zinc-500 shrink-0">Window: <span id="windowHours">24</span>h</div>
         </div>
-        <div class="overflow-x-auto">
+        <div id="modelsCards" class="block md:hidden p-4 space-y-3"></div>
+        <div class="hidden md:block overflow-x-auto">
           <table class="w-full min-w-[900px]">
             <thead class="text-zinc-400 text-sm bg-zinc-900/80">
               <tr>
@@ -122,8 +123,11 @@
       document.getElementById('lastUpdated').textContent = `Updated ${relTime(data.generatedAt)} (${new Date(data.generatedAt).toLocaleString()})`;
 
       const table = document.getElementById('modelsTable');
+      const cards = document.getElementById('modelsCards');
       table.innerHTML = '';
+      cards.innerHTML = '';
       for (const model of data.models) {
+        const costClass = model.costUsd > 5 ? 'text-red-400' : 'text-emerald-400';
         const tr = document.createElement('tr');
         tr.className = 'hover:bg-zinc-800/50';
         tr.innerHTML = `
@@ -136,9 +140,44 @@
           <td class="px-4 py-4 text-right num">${intFmt.format(model.totalTokens)}</td>
           <td class="px-4 py-4 text-right num">${intFmt.format(model.messages)}</td>
           <td class="px-4 py-4 text-right num">${intFmt.format(model.sessions)}</td>
-          <td class="px-6 py-4 text-right num font-semibold ${model.costUsd > 5 ? 'text-red-400' : 'text-emerald-400'}">${money.format(model.costUsd)}</td>
+          <td class="px-6 py-4 text-right num font-semibold ${costClass}">${money.format(model.costUsd)}</td>
         `;
         table.appendChild(tr);
+
+        const card = document.createElement('div');
+        card.className = 'rounded-2xl border border-zinc-800 bg-zinc-950/50 p-4';
+        card.innerHTML = `
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <div>
+              <div class="font-medium text-zinc-100">${model.displayName}</div>
+              <div class="text-xs text-zinc-500 break-all">${model.model}</div>
+            </div>
+            <div class="text-right num font-semibold ${costClass}">${money.format(model.costUsd)}</div>
+          </div>
+          <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            <div>
+              <div class="text-zinc-500">Input</div>
+              <div class="num text-zinc-200">${intFmt.format(model.inputTokens)}</div>
+            </div>
+            <div>
+              <div class="text-zinc-500">Output</div>
+              <div class="num text-zinc-200">${intFmt.format(model.outputTokens)}</div>
+            </div>
+            <div>
+              <div class="text-zinc-500">Total</div>
+              <div class="num text-zinc-200">${intFmt.format(model.totalTokens)}</div>
+            </div>
+            <div>
+              <div class="text-zinc-500">Messages</div>
+              <div class="num text-zinc-200">${intFmt.format(model.messages)}</div>
+            </div>
+            <div>
+              <div class="text-zinc-500">Sessions</div>
+              <div class="num text-zinc-200">${intFmt.format(model.sessions)}</div>
+            </div>
+          </div>
+        `;
+        cards.appendChild(card);
       }
 
       const costShare = document.getElementById('costShare');
@@ -148,7 +187,7 @@
         const pct = total > 0 ? (model.costUsd / total) * 100 : 0;
         const wrap = document.createElement('div');
         wrap.innerHTML = `
-          <div class="flex justify-between text-sm mb-1">
+          <div class="flex flex-col sm:flex-row sm:justify-between text-sm mb-1 gap-1">
             <span class="text-zinc-200">${model.displayName}</span>
             <span class="num text-zinc-400">${money.format(model.costUsd)} • ${pct.toFixed(1)}%</span>
           </div>
