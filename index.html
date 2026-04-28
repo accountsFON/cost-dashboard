@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five One Nine Marketing - Model Cost Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #2e3c41;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2e3c41;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #eaeaea;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        .note {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .alert {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>Five One Nine Marketing - Model Cost Dashboard</header>
+    <div class="container">
+        <h2>Token Usage & Costs Per Model</h2>
+        <p>This dashboard provides an overview of token usage and associated costs for AI models used by Five One Nine Marketing's OpenClaw setup. Data is based on recent session information and known pricing.</p>
+        <div class="note">Note: Costs are estimates based on available session data and may not reflect the full $350 spent in the last 24 hours. For complete billing, check the OpenRouter dashboard.</div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Provider</th>
+                    <th>Input Tokens</th>
+                    <th>Output Tokens</th>
+                    <th>Total Tokens</th>
+                    <th>Estimated Cost (USD)</th>
+                    <th>Usage Context</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Grok-3</td>
+                    <td>XAI</td>
+                    <td>115,923</td>
+                    <td>4,000 (est.)</td>
+                    <td>119,923</td>
+                    <td>$7.39</td>
+                    <td>Current Session (agent:main:main)</td>
+                </tr>
+                <tr>
+                    <td>Gemini 2.5 Flash</td>
+                    <td>OpenRouter/Google</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>$0.30/$2.50 per MTok (base rate)</td>
+                    <td>Cron Jobs, Innovation Pings, Email Tasks</td>
+                </tr>
+                <tr>
+                    <td>Gemini 2.5 Flash Lite</td>
+                    <td>OpenRouter/Google</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>$0.10/$0.40 per MTok (base rate)</td>
+                    <td>Security Watchdog, Vault Sync</td>
+                </tr>
+                <tr>
+                    <td>Claude Opus 4.6</td>
+                    <td>Anthropic</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>Not Used in Cron/Current Session</td>
+                    <td>Available On-Demand via /model command</td>
+                </tr>
+                <tr>
+                    <td class="alert">Unknown High-Cost Usage</td>
+                    <td class="alert">TBD</td>
+                    <td class="alert">-</td>
+                    <td class="alert">-</td>
+                    <td class="alert">-</td>
+                    <td class="alert">~$342.61 (Remaining)</td>
+                    <td class="alert">Likely manual Opus usage or past sessions</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">Updated: 2026-04-28 04:23 UTC | Data reflects current session and known cron job configurations. Full cost breakdown requires OpenRouter dashboard access.</div>
+        
+        <h2>Cost Management Actions</h2>
+        <p>To address the $350 spent in the last 24 hours, consider the following:</p>
+        <ul>
+            <li><strong>OpenRouter Dashboard Review</strong>: Access detailed billing logs for exact usage of high-cost models like Opus.</li>
+            <li><strong>Cost Monitoring Cron Job</strong>: Set up a recurring job to alert on high-cost model usage.</li>
+            <li><strong>Model Restrictions</strong>: Limit on-demand usage of expensive models like Opus to critical tasks only.</li>
+        </ul>
+    </div>
+    <div class="footer">
+        Dashboard generated by Jay Promptley, Executive AI Assistant | Five One Nine Marketing
+    </div>
+</body>
+</html>
