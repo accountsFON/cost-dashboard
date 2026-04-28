@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T13:24:08.058210+00:00",
+  "generatedAt": "2026-04-28T13:32:55.147718+00:00",
   "maxDays": 30,
   "defaultRangeDays": 30,
   "availableRanges": [
@@ -35,16 +35,16 @@
     }
   ],
   "stats": {
-    "processedFiles": 461,
-    "processedMessages": 1662
+    "processedFiles": 463,
+    "processedMessages": 1660
   },
   "totals30d": {
-    "inputTokens": 10658854,
-    "outputTokens": 904788,
-    "totalTokens": 69882624,
-    "costUsd": 41.05467,
-    "messages": 1662,
-    "sessions": 461
+    "inputTokens": 10676572,
+    "outputTokens": 913267,
+    "totalTokens": 69703992,
+    "costUsd": 41.028447,
+    "messages": 1660,
+    "sessions": 463
   },
   "mostExpensiveModel30d": "Grok 3",
   "models30d": [
@@ -109,13 +109,13 @@
       "displayName": "Claude Haiku 4.5",
       "family": "claude",
       "color": "#f59e0b",
-      "inputTokens": 4877,
-      "outputTokens": 54472,
-      "totalTokens": 11854581,
-      "costUsd": 2.643857,
-      "messages": 403,
-      "sessions": 142,
-      "firstSeen": "2026-04-27T13:20:06.892000+00:00",
+      "inputTokens": 4781,
+      "outputTokens": 53493,
+      "totalTokens": 11631753,
+      "costUsd": 2.6119,
+      "messages": 395,
+      "sessions": 139,
+      "firstSeen": "2026-04-27T13:35:16.550000+00:00",
       "lastSeen": "2026-04-28T01:40:43.801000+00:00"
     },
     {
@@ -151,25 +151,25 @@
       "displayName": "Gemini 2.5 Flash Lite",
       "family": "gemini",
       "color": "#3b82f6",
-      "inputTokens": 3320189,
-      "outputTokens": 421312,
-      "totalTokens": 6850912,
-      "costUsd": 0.537129,
-      "messages": 435,
-      "sessions": 248,
+      "inputTokens": 3338003,
+      "outputTokens": 430770,
+      "totalTokens": 6895108,
+      "costUsd": 0.542863,
+      "messages": 441,
+      "sessions": 253,
       "firstSeen": "2026-04-27T05:39:53.614000+00:00",
-      "lastSeen": "2026-04-28T13:24:07.973000+00:00"
+      "lastSeen": "2026-04-28T13:32:52.051000+00:00"
     }
   ],
   "daily": [
     {
       "date": "2026-04-27",
-      "inputTokens": 979549,
-      "outputTokens": 324876,
-      "totalTokens": 28052457,
-      "costUsd": 15.088362,
-      "messages": 786,
-      "sessions": 198,
+      "inputTokens": 970536,
+      "outputTokens": 323456,
+      "totalTokens": 27820271,
+      "costUsd": 15.055336,
+      "messages": 777,
+      "sessions": 194,
       "models": [
         {
           "model": "claude-sonnet-4-6",
@@ -204,13 +204,13 @@
           "displayName": "Claude Haiku 4.5",
           "family": "claude",
           "color": "#f59e0b",
-          "inputTokens": 4284,
-          "outputTokens": 47336,
-          "totalTokens": 10132425,
-          "costUsd": 2.021035,
-          "messages": 354,
-          "sessions": 124,
-          "firstSeen": "2026-04-27T13:20:06.892000+00:00",
+          "inputTokens": 4188,
+          "outputTokens": 46357,
+          "totalTokens": 9909597,
+          "costUsd": 1.989078,
+          "messages": 346,
+          "sessions": 121,
+          "firstSeen": "2026-04-27T13:35:16.550000+00:00",
           "lastSeen": "2026-04-27T23:51:31.687000+00:00"
         },
         {
@@ -232,12 +232,12 @@
           "displayName": "Gemini 2.5 Flash Lite",
           "family": "gemini",
           "color": "#3b82f6",
-          "inputTokens": 276513,
-          "outputTokens": 44970,
-          "totalTokens": 343838,
-          "costUsd": 0.045863,
-          "messages": 46,
-          "sessions": 42,
+          "inputTokens": 267596,
+          "outputTokens": 44529,
+          "totalTokens": 334480,
+          "costUsd": 0.044795,
+          "messages": 45,
+          "sessions": 41,
           "firstSeen": "2026-04-27T05:39:53.614000+00:00",
           "lastSeen": "2026-04-27T23:52:32.781000+00:00"
         }
@@ -245,12 +245,12 @@
     },
     {
       "date": "2026-04-28",
-      "inputTokens": 9679305,
-      "outputTokens": 579912,
-      "totalTokens": 41830167,
-      "costUsd": 25.966308,
-      "messages": 876,
-      "sessions": 263,
+      "inputTokens": 9706036,
+      "outputTokens": 589811,
+      "totalTokens": 41883721,
+      "costUsd": 25.97311,
+      "messages": 883,
+      "sessions": 269,
       "models": [
         {
           "model": "grok-3",
@@ -341,14 +341,14 @@
           "displayName": "Gemini 2.5 Flash Lite",
           "family": "gemini",
           "color": "#3b82f6",
-          "inputTokens": 3043676,
-          "outputTokens": 376342,
-          "totalTokens": 6507074,
-          "costUsd": 0.491267,
-          "messages": 389,
-          "sessions": 206,
+          "inputTokens": 3070407,
+          "outputTokens": 386241,
+          "totalTokens": 6560628,
+          "costUsd": 0.498069,
+          "messages": 396,
+          "sessions": 212,
           "firstSeen": "2026-04-28T00:02:31.495000+00:00",
-          "lastSeen": "2026-04-28T13:24:07.973000+00:00"
+          "lastSeen": "2026-04-28T13:32:52.051000+00:00"
         }
       ]
     }
