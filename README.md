@@ -6,16 +6,16 @@ Public GitHub Pages dashboard for OpenClaw token usage and cost by model.
 - Source: OpenClaw local session transcript usage metadata
 - Coverage: This dashboard includes local OpenClaw-tracked usage stored in transcripts. External billing that does not land in local transcripts is not included.
 - Max range: last 30 days
-- Last generated: 2026-04-30T14:57:10.729758+00:00
+- Last generated: 2026-04-30T14:59:20.441327+00:00
 
 ## 30 day totals
 
-- Cost: $84.32
-- Input tokens: 81,037,494
-- Output tokens: 1,164,369
-- Total tokens: 336,600,023
-- Messages: 5,573
-- Sessions: 944
+- Cost: $84.26
+- Input tokens: 80,860,914
+- Output tokens: 1,160,203
+- Total tokens: 336,351,578
+- Messages: 5,558
+- Sessions: 935
 
 ## Sources
 
@@ -28,7 +28,7 @@ Public GitHub Pages dashboard for OpenClaw token usage and cost by model.
 - GPT-5.4: $44.52, 103,646,795 tokens, 872 messages
 - Grok 3: $10.97, 8,555,121 tokens, 110 messages
 - Claude Sonnet 4.6: $9.23, 12,662,687 tokens, 258 messages
-- Gemini 2.5 Flash: $7.76, 30,165,796 tokens, 1452 messages
-- Gemini 2.5 Flash Lite: $6.33, 176,701,396 tokens, 2805 messages
+- Gemini 2.5 Flash: $7.70, 29,947,029 tokens, 1439 messages
+- Gemini 2.5 Flash Lite: $6.33, 176,671,718 tokens, 2803 messages
 - Claude Opus 4.6: $4.05, 3,465,230 tokens, 58 messages
 - Grok 4.20: $1.47, 1,402,998 tokens, 18 messages
