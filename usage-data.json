@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-02T07:16:53.136181+00:00",
+  "generatedAt": "2026-05-02T07:19:15.451105+00:00",
   "maxDays": 30,
   "defaultRangeDays": 30,
   "availableRanges": [
@@ -35,16 +35,16 @@
     }
   ],
   "stats": {
-    "processedFiles": 931,
-    "processedMessages": 6321
+    "processedFiles": 933,
+    "processedMessages": 6326
   },
   "totals30d": {
-    "inputTokens": 254015643,
-    "outputTokens": 1304970,
-    "totalTokens": 767573372,
-    "costUsd": 121.876062,
-    "messages": 6321,
-    "sessions": 931
+    "inputTokens": 254056481,
+    "outputTokens": 1306060,
+    "totalTokens": 767678698,
+    "costUsd": 121.89294,
+    "messages": 6326,
+    "sessions": 933
   },
   "mostExpensiveModel30d": "GPT-5.4",
   "models30d": [
@@ -67,14 +67,14 @@
       "displayName": "Gemini 2.5 Flash",
       "family": "gemini",
       "color": "#3b82f6",
-      "inputTokens": 105175233,
-      "outputTokens": 303719,
-      "totalTokens": 166982160,
-      "costUsd": 34.156964,
-      "messages": 1952,
-      "sessions": 686,
+      "inputTokens": 105216071,
+      "outputTokens": 304809,
+      "totalTokens": 167087486,
+      "costUsd": 34.173842,
+      "messages": 1957,
+      "sessions": 688,
       "firstSeen": "2026-04-27T04:59:50.918000+00:00",
-      "lastSeen": "2026-05-02T07:16:53.004000+00:00"
+      "lastSeen": "2026-05-02T07:19:15.375000+00:00"
     },
     {
       "model": "google/gemini-2.5-flash-lite",
@@ -443,26 +443,26 @@
     },
     {
       "date": "2026-05-02",
-      "inputTokens": 34410989,
-      "outputTokens": 204852,
-      "totalTokens": 115090166,
-      "costUsd": 7.926876,
-      "messages": 957,
-      "sessions": 273,
+      "inputTokens": 34451827,
+      "outputTokens": 205942,
+      "totalTokens": 115195492,
+      "costUsd": 7.943754,
+      "messages": 962,
+      "sessions": 275,
       "models": [
         {
           "model": "google/gemini-2.5-flash",
           "displayName": "Gemini 2.5 Flash",
           "family": "gemini",
           "color": "#3b82f6",
-          "inputTokens": 15479242,
-          "outputTokens": 71150,
-          "totalTokens": 33241874,
-          "costUsd": 5.352392,
-          "messages": 508,
-          "sessions": 210,
+          "inputTokens": 15520080,
+          "outputTokens": 72240,
+          "totalTokens": 33347200,
+          "costUsd": 5.36927,
+          "messages": 513,
+          "sessions": 212,
           "firstSeen": "2026-05-02T00:01:12.626000+00:00",
-          "lastSeen": "2026-05-02T07:16:53.004000+00:00"
+          "lastSeen": "2026-05-02T07:19:15.375000+00:00"
         },
         {
           "model": "google/gemini-2.5-flash-lite",
